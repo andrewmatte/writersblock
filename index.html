@@ -1,0 +1,298 @@
+<html>
+
+<head>
+  <title>Writer's Block</title>
+</head>
+
+<body>
+
+  <style>
+    body {
+      background: linear-gradient(125deg, #FDFF9C 0%, #0500FF 100%), linear-gradient(180deg, #D3D3D3 0%, #161616 100%), linear-gradient(310deg, #00F0FF 0%, #00F0FF 20%, #0017E3 calc(20% + 1px), #0017E3 40%, #000F8F calc(40% + 1px), #000F8F 70%, #00073F calc(70% + 1px), #00073F 100%), linear-gradient(285deg, #FFB6B9 0%, #FFB6B9 35%, #FAE3D9 calc(35% + 1px), #FAE3D9 45%, #BBDED6 calc(45% + 1px), #BBDED6 65%, #61C0BF calc(65% + 1px), #61C0BF 100%);
+      background-blend-mode: overlay, overlay, exclusion, normal;
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    textarea {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 150%;
+    }
+
+    .faaade {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      padding: 25px;
+      display: block;
+      cursor: help;
+    }
+
+    button {
+      margin: 25px;
+      font-size: 100%;
+      padding: 15px 32px;
+      background: #3498db;
+      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+      background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+      background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+      background-image: -o-linear-gradient(top, #3498db, #2980b9);
+      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+      -webkit-border-radius: 28;
+      -moz-border-radius: 28;
+      border-radius: 28px;
+      border-color: silver;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3cb0fd;
+      background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+      text-decoration: none;
+    }
+
+    div {
+      display: none;
+      font-size: 300%;
+    }
+  </style>
+
+  <script>
+    function addFade(num) {
+      document.getElementById(num).classList.add("faaade");
+      document.getElementById(-1 + num).classList.remove("faaade");
+      if (num == 38) {
+        elem = document.getElementById("draft");
+        elem.innerHTML = "<p>" + document.getElementById("introduction").value + "</p>" +
+          "<p>" + document.getElementById("intentions").value + "</p>" + "<p>" + document.getElementById("details").value + "</p>" +
+          "<p>" + document.getElementById("summary").value + "</p>" + "<p>" + document.getElementById("sendoff").value + "</p>";
+          elem.style= "display:block"
+      }
+    }
+  </script>
+
+  <div id='1' class="faaade">Thank yourself for using this checklist. I humbly hope that it hopes
+    you and those you interact with. Please feel free to give feedback any time in the future. You and I want a better
+    world.<br><button onclick='addFade(2)'>proceed</button></div>
+
+  <div id='2'>Before I give you a place to write, let us think of gratitude for our existence, the
+    existence of others and the opportunity to interact with each other. The people you communicate to will appreciate
+    your deliberate time.<br><button onclick='addFade(3)'>proceed</button></div>
+
+  <div id='3'>To improve your correspondence, let's start with a few questions that will help you
+    focus your thoughts and expedite your writing.<br><button onclick='addFade(4)'>proceed</button></div>
+
+  <div id='4'>What is the name of the people or group you are writing to?<br>
+    <textarea cols="25" rows="3"></textarea><br>
+    <button onclick='addFade(5)'>proceed</button>
+  </div>
+
+  <div id='5'>What date or year did you meet them?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(6)'>proceed</button>
+  </div>
+
+  <div id='6'>Under what circumstances did you meet?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(7)'>proceed</button>
+  </div>
+
+  <div id='7'>Is this business or pleasure?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(8)'>proceed</button>
+  </div>
+
+  <div id='8'>What is their relationship to you?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(9)'>proceed</button>
+  </div>
+
+  <div id='9'>What is your relationship to them?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(10)'>proceed</button>
+  </div>
+
+  <div id='10'>Are there things that you want the recipient(s) to do after they receive your
+    communication?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(11)'>proceed</button>
+  </div>
+
+  <div id='11'>Is there anything that you intend to do after sending this communication?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(12)'>proceed</button>
+  </div>
+
+  <div id='12'>Is it better that you take action before this is sent?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(13)'>proceed</button>
+  </div>
+
+  <div id='13'>Those were the basics. Let's get into some more interesting questions about
+    you.<br><button onclick='addFade(14)'>proceed</button></div>
+
+  <div id='14'>What is the most powerful you have ever been?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(15)'>proceed</button>
+  </div>
+
+  <div id='15'>What is the most powerful you will ever be?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(16)'>proceed</button>
+  </div>
+
+  <div id='16'>What is the weakest you have ever been?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(17)'>proceed</button>
+  </div>
+
+  <div id='17'>What is the weakest you will ever be?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(18)'>proceed</button>
+  </div>
+
+  <div id='18'>The perfect day is a day that you would live on repeat forever. Is this a message
+    that you would send to everyone forever? Just consider it for your next email.
+    <br><button onclick='addFade(19)'>proceed</button>
+  </div>
+
+  <div id='19'>If everyone everywhere could know about you, what would you want them to know?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(20)'>proceed</button>
+  </div>
+
+  <div id='20'>Do you want to make a mark on the world? If so, what kind?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(21)'>proceed</button>
+  </div>
+
+  <div id='21'>Is this message getting you closer to that? If not, please reconsider whether you
+    should send this message because it's not helping your prime directive.<br><button
+      onclick='addFade(22)'>proceed</button></div>
+
+  <div id='22'>I'm so nosy. I hope it's not too uncomfortable but remember the most amazing things
+    often stretch your comfort. Make the time for this. You said it was important! I'll get back on track.<br>
+    </textarea><br><button onclick='addFade(23)'>proceed</button>
+  </div>
+
+  <div id='23'>How do you want the recipient(s) to feel when they read this? How do you want them
+    to react?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(24)'>proceed</button>
+  </div>
+
+  <div id='24'>Can you make them feel better than that? Should you? Will you? How?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(25)'>proceed</button>
+  </div>
+
+  <div id='25'>Stretch.<br><button onclick='addFade(26)'>proceed</button></div>
+
+  <div id='26'>Breathe.<br><button onclick='addFade(27)'>proceed</button></div>
+
+  <div id='27'>Would you like to drink some water, slowly?<br><button onclick='addFade(28)'>proceed</button></div>
+
+  <div id='28'>Should you include a call to action? If so, what opportunity would you like to
+    present to them and you to cooperate?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(29)'>proceed</button>
+  </div>
+
+  <div id='29'>Is your call to action S.M.A.R.T.? Specific, measurable, achievable, realistic,
+    timely?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(30)'>proceed</button>
+  </div>
+
+  <div id='30'>What is the right time to send this message?<br>
+    <textarea cols="25" rows="3"></textarea><br><button onclick='addFade(31)'>proceed</button>
+  </div>
+
+  <div id='31'>Since this message is important, please draft it now and sleep overnight before
+    coming back to decide whether it's ready.<br><button onclick='addFade(32)'>proceed</button></div>
+
+  <div id='32'>Have your intentions changed? Are you still thinking of the same
+    recipient(s)?<br><button onclick='addFade(33)'>proceed</button></div>
+
+  <div id='33'>Excellent. Now write your introduction. It can be comprised of a greeting and an
+    expression of the best intentions. "Hello my friend. I hope you have been well. I would prefer to talk to you in
+    person but [reasons]."<br>
+    <textarea cols="25" rows="3" id="introduction"></textarea><br><button onclick='addFade(34)'>proceed</button>
+  </div>
+
+  <div id='34'>Well done. Now announce your intentions. Tell them why you are sending this
+    message. "I want [to let you know|to ask you if you would|to know from you|to thank you]." This should not be more
+    than 3 sentences. Give them the chance to anticipate the rest of the email. This practice is incredibly effective in
+    helping them remember what you write to them. Think of it as helping them load the memory modules of this topic.<br>
+    <textarea cols="25" rows="3" id="intentions"></textarea><br><button onclick='addFade(35)'>proceed</button>
+  </div>
+
+  <div id='35'>Great work. Now you can share some details you've already done the hardest part.
+    You can skip this step and close the message here if you are feeling concise. Please consider the expression "less
+    is more". A nice amount of writing is 3-sentence paragraphs per announcement of intentions. Keep yourself out of
+    this. These details should not be about you. You are not the subject or actor: you are the object and observer.
+    Share that narration.<br>
+    <textarea cols="25" rows="3" id="details"></textarea><br><button onclick='addFade(36)'>proceed</button>
+  </div>
+
+  <div id='36'>Stop writing details. Express your feelings about the topic. This is about you. How
+    will you feel for them to know all of this? If appropriate, it is good practice to thank them for their attention
+    and participation in this matter.<br>
+    <textarea cols="25" rows="3" id="summary"></textarea><br><button onclick='addFade(37)'>proceed</button>
+  </div>
+
+  <div id='37'>This is the last step. You might die shortly after sending this. What is your sendoff
+    before turning into dust? This practice is as old as letters. It's classic and will stand the test of
+    time.<br>
+    <textarea cols="25" rows="3" id="sendoff"></textarea><br><button onclick='addFade(38)'>proceed</button>
+  </div>
+
+  <div id='38'>Wonderful. Now to polish this message.<br><button onclick='addFade(39)'>proceed</button></div>
+
+  <div id='39'>Did you include a call to action?<br><button onclick='addFade(40)'>proceed</button></div>
+
+  <div id='40'>Do you need attachments?<br><button onclick='addFade(41)'>proceed</button></div>
+
+  <div id='41'>Subject lines help people decide whether they want to read your email. Be humble:
+    it pays better.<br><button onclick='addFade(42)'>proceed</button></div>
+
+  <div id='42'>Still the right target audience? Of course it is...<br><button onclick='addFade(43)'>proceed</button>
+  </div>
+
+  <div id='43'>Are you missing any attachments? I'm not talking about worldly attachments... the
+    PDF! The image? The zip file? XLSX?<br><button onclick='addFade(44)'>proceed</button></div>
+
+  <div id='44'>Please double check your grammar and get rid of any typos. I said I was helping you
+    with this and I don't want you to make me look bad.<br><button onclick='addFade(45)'>proceed</button></div>
+
+  <div id='45'>Is this message crazy-different from all your others? Hmmm... maybe it's a good
+    shift.<br><button onclick='addFade(46)'>proceed</button></div>
+
+  <div id='46'>CC? BCC? In case you didn't know, it stands for Carbon Copy and Blind Carbon Copy
+    from the era of typewriters.<br><button onclick='addFade(47)'>proceed</button></div>
+
+  <div id='47'>Oh wait. You shared all those details. Are they all true? Can you check them?
+    Better for you to check them than they check them and find out they're not true.<br><button
+      onclick='addFade(48)'>proceed</button></div>
+
+  <div id='48'>Wow. You did it. Amazing. Thank you for going on that journey with
+    me.<br><button onclick='addFade(49)'>proceed</button></div>
+
+  <div id='49'>This still feels like a sleep before sending... It is important. It can wait
+    overnight but I'm not going to be there to review it.<br><button onclick='addFade(50)'>proceed</button></div>
+
+  <div id='50'>Thank you!<br><button>done</button></div>
+
+  <div id="draft"></div>
